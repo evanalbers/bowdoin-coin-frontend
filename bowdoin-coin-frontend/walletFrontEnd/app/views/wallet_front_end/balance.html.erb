@@ -1,0 +1,13 @@
+<body style="background-color:#9FE2BF;">
+<% if Info.all == []%>
+<p> User Balance: no balance requested yet </p>
+<% else%>
+<p> Requested User Balance: <%= Info.all.first.balance %> </p>
+<% end%>
+
+<%= form_tag do%>
+
+    <p> <%= submit_tag "Go back" %> </p>
+<% end%>
+
+</body>

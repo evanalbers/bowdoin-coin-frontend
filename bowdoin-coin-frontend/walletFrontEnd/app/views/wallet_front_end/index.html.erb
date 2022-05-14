@@ -1,0 +1,41 @@
+<body style="background-color:#9FE2BF;">
+<h1>Welcome to your BowdoinCoin Wallet</h1>
+
+<div style="display:inline-block;vertical-align:top;">
+<%= image_tag("main.png", size: "200x200", alt: "rss feed") %>
+</div>
+<div style="display:inline-block;">
+<p>All of your transactions are saved on a blockchain. Public keys represent users; private keys are equaivalent to passwords. </p>
+<p>A public key should be of the format: <em>public_key1</em> where you can replace 1 with another number from 1-9.  </p>
+<p>A private key should be of the format: <em>private_key1</em> where you can replace 1 with another number from 1-9.  </p>
+<p>Note: All first-time users have a balance of 100.0. </p>
+</div>
+
+
+ <br>
+ <br>
+
+<%= form_tag do%>
+    <p> Sender Public Key: <%= text_field_tag(:sender)%></p>
+    <p> Recipient Public Key: <%= text_field_tag(:recipient)%></p>
+    <p> Amount: <%= text_field_tag(:amount)%></p>
+    <p> Sender Private Key: <%= text_field_tag(:senderp)%></p>
+    <p> <%= submit_tag "Make Transaction" %> </p>
+<% end%>
+
+ <br>
+ <br>
+ <br>
+ <br>
+
+
+<%= form_tag do%>
+    <p> User Public Key: <%= text_field_tag(:user)%></p>
+    <p> <%= submit_tag "Get User Balance" %> </p>
+<% end%>
+
+
+
+
+
+</body>
